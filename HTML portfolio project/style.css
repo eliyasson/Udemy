@@ -1,0 +1,21 @@
+
+ol {
+    margin-left: .40px;
+    margin-top: -20px;
+    list-style-position: inside;
+}
+.red{
+    color: red;
+}
+.black{
+    color: black;
+}
+.green{
+    color: green;
+}
+.blue{
+    color: blue;
+}
+li{
+    font-size: 20px;
+}
