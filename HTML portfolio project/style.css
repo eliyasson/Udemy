@@ -19,3 +19,26 @@ ol {
 li{
     font-size: 20px;
 }
+.first {
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    border: 10px solid black;
+    margin: 10px 0 0 10px;
+    background-color: rgb(3, 168, 168);
+}
+.second {
+    height: 200px;
+    width: 200px;
+    border: solid black;
+    border-width: 20px 10px ;
+    margin: 0 0 0 270px;
+    background-color: rgb(189, 197, 41);
+}
+.third{
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    margin: 0 0 0 50px;
+    background-color: rgb(211, 57, 139);
+}
