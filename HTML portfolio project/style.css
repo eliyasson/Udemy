@@ -1,4 +1,6 @@
-
+*{
+    background-color: black;
+}
 ol {
     margin-left: .40px;
     margin-top: -20px;
@@ -57,4 +59,22 @@ li.done{
 }
 ul p.done{
     font-size: 0.5rem;
+}
+.box{
+    position: relative;
+    height: 300px;
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 200px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.circle{
+    position: absolute;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 50px;
+   left: 150px; 
 }
