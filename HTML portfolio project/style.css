@@ -78,3 +78,21 @@ ul p.done{
     top: 50px;
    left: 150px; 
 }
+.circle2{
+   position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(0, 13, 255);
+    border-radius: 50%;
+    top: 50px;
+    left: 50px;
+}
+.circle3{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    top: 125px;
+    left: 225px;
+}
