@@ -14,7 +14,8 @@ div{
     background-color: brown;
     float: right;
     width: 45%;
-   
+    text-align: right;
+    
     padding-right: 10px;
 }
 .para2 p{
@@ -22,7 +23,7 @@ div{
 }
 img{
     float: left;
-    margin: 0 10px 0 0;
+    margin: 0 0 0 0;
     border-radius: 50%;
     margin-top: 5px;
     margin-left: 5px;
