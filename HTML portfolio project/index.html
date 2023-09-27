@@ -7,7 +7,20 @@
     <title>Eliyas Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+   <style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;
+        gap: 30px;
+    }
+    .first{
+       grid-column: span 2;
+    }
+    .card {
+        background-color: rgb(84, 84, 84);
+    }
+   </style>
 </head>
 <body>
     <!--
@@ -49,7 +62,7 @@
 
         </div>
      </div>
-     -->
+     
      <div class="card">
         <div class="image">
             <img src="./Folder1/eliyas 1.jpg" alt="image">
@@ -68,14 +81,16 @@
             <a href="#" class="fa fa-linkedin"></a>
          
             
+        </div> 
+     </div>-->
+        <div class="grid-container">
+            <div class="first card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
         </div>
-     </div>
         
-        
-             
-    
-     
-
     <hr>
     <!--<a href="./Folder1/about.html">About Me</a>
     <a href="./Folder1/contact.html">Contact me</a> -->
