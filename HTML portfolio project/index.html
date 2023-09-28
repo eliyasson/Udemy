@@ -9,16 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <style>
     .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 200px 200px 200px;
-        gap: 30px;
-    }
-    .first{
-       grid-column: span 2;
+        display: flex;
+        
     }
     .card {
-        background-color: rgb(84, 84, 84);
+        background-color: rgb(9, 42, 254);
+        border: 30px solid rgb(255, 255, 255);
+        height: 50px;
+        flex: 1;
+    }
+    .first{
+       flex: 2;
+    }
+    .second{
+        flex: 0.5;
     }
    </style>
 </head>
@@ -83,9 +87,9 @@
             
         </div> 
      </div>-->
+
         <div class="grid-container">
             <div class="first card"></div>
-            <div class="card"></div>
             <div class="card"></div>
             <div class="card"></div>
             <div class="card"></div>
