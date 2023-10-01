@@ -1,0 +1,17 @@
+div{
+    display: flex;
+}
+.one{
+    float: left;
+    width: 25%;
+    margin-right: 10px;
+}
+.two{
+    float: left;
+    width: 25%;
+    margin-right: 10px;
+}
+.three{
+    float: left;
+    width: 40%;
+}
