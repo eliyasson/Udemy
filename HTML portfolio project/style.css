@@ -1,61 +1,61 @@
-body{
 
+.nav{
     display: flex;
-    flex-direction: column;
-    min-height: 95vh;
-    margin: 50px 50px 0 50px;
+    flex-flow: row wrap;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0;
+    background: deepskyblue;  
+}
+.nav a{
+    text-decoration: none;
+    display: block;
+    padding: 16px;
+    color: white;
+}
+.nav a:hover{
+    background: lightgreen;
+}
+@media all and (max-width: 600px) {
+    .nav {
+        justify-content: space-around;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+    .nav a{
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
     
 }
-main{
-    flex: 1;
-}
-.main{
-    font-size: 3rem;
-    margin-left: 20px;   
-}
-.creative{
-    color: blueviolet;
+.content{
+    
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    
 }
 
-.card{
-    width: 45%;
-   
-}
-.one{
-    float: left;   
-}
-.two{
-
-    float:right;
-}
-.images{
-    width: 200px;
-    height: 220px;
-    border-radius: 50%;
+.aside1{
+    width: 25%;
     float: left;
-    padding-right: 10px;
+    background-color: yellow;
+}
+p{
+   
+    width: 50%;
+    background-color: aqua;
+}
+.aside2{
+    width: 25%;
+    float: right;
+    background-color: red;
 }
 .footer{
-    text-align: center;
+    background-color: cadetblue;
     width: 100%;
-    padding: 10px;
-    background-color: blanchedalmond;
-    
-}
-@media (max-width: 600px) {
-    .main{
-        font-size: 2.5rem;
-    }
-    .card{
-        width: 100%;
-        display: block;
-        text-align: justify;
-       
-    }
-    .one img{
-       width: 100%;
-       object-fit: cover;
-        margin-bottom: 10px;
-        display: inline;
-    }
+    text-align: center;
 }
