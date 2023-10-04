@@ -63,46 +63,41 @@ p{
     text-align: center;
 }
 .container{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    gap: 2rem;
-    height: 100vh;
-   
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  
 }
 .basic{
-    flex: 1;
-    max-width: 300px;
-   
-    padding: 10px;
-    background-color: rgba(173, 207, 241, 0.413);
-    border-radius: 5px;
-    text-align: center;
+  padding: 20px;
+  background-color: rgba(223, 236, 249, 0.708);
+  font-size: 1rem;
+  
+    
 }
 .price-title {
-    font-size: 1.5rem;
     font-weight: bold;
 }
 .pricing{
-    font-size: 2.5rem;
-    padding-top: 10px;
-    font-weight: bold;
+  font-weight: bold; 
+  font-size: 2rem;
 }
 .plan-features  {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-.plan-features li{
-    margin-bottom: 10px;
-}
-.plan-button{
-    align-items: center;
     padding: 10px;
-    border-radius: 5px;
-    color: white;
-    background-color: rgb(251, 105, 0);
-    border: none;
+}
+
+.plan-button{
+   background-color: rgb(255, 85, 0); 
+   color: white;
+   padding: 5px;
+   border-radius: 5px;
+   border-style: none;
 }
 @media (max-width: 600px){
     .container{
