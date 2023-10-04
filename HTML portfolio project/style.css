@@ -105,3 +105,17 @@ p{
         height: 100%;
     }
 }
+.chess-container{
+    margin: 50px;
+    display: grid;
+    height: 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
+    
+}
+.white{
+    background-color: #f0d9b5;
+}
+.black{
+    background-color: #b58863;
+}
