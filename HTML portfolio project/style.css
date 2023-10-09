@@ -1,4 +1,4 @@
-
+/*
 .nav{
     display: flex;
     flex-direction: row;
@@ -65,7 +65,7 @@ p{
 .container{
   display: flex;
   align-items: center;
-  height: 100vh;
+  margin: 50px;
   justify-content: center;
   text-align: center;
   gap: 20px;
@@ -104,4 +104,5 @@ p{
         flex-direction: column;
         height: 100%;
     }
-}
+} */
+
