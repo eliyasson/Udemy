@@ -1,8 +1,3 @@
-function changeLight(status){
-    const bulb = document.getElementById("bulb");
-    if (status === 'on'){
-      bulb.src = "./assets/images/bulb on.png";
-    } else if (status === 'off') {
-      bulb.src = "./assets/images/bulb off.png";
-    }
-  }
+var tweet = prompt("Compose your tweet: ");
+var tweetCount = tweet.length;
+alert("You have written " + tweetCount + " characters, you have " + (140 - tweetCount) + " characters remaining.")
