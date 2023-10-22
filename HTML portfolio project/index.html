@@ -18,7 +18,8 @@
   <script>
     var tweet = prompt("Write your tweet here: ");
     var tweetLength = tweet.length;
-    alert("You have written " + tweetLength + " character, you have  " + (140 - tweetLength) + " character remaining.");
+    alert(tweet.slice(0, 140));
+    
   </script>
 </body>
 </html>
