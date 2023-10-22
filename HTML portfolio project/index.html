@@ -16,9 +16,12 @@
   <button onclick="changeLight('off')">Turn the light off</button>
 
   <script>
-    var tweet = prompt("Write your tweet here: ");
+    var tweet = prompt("Enter your name here: ");
     var tweetLength = tweet.length;
-    alert(tweet.slice(0, 140));
+    var firstLetter = tweet.slice(0, 1).toUpperCase();
+    var restLetter = tweet.slice(1, tweetLength);
+    alert("Hello " + firstLetter + restLetter);
+    
     
   </script>
 </body>
