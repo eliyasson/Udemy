@@ -1,4 +1,16 @@
-function changeLight(status){
+//BMI calculator
+
+function bmiCalculator(weight, height) {
+    const BMI = Math.round(weight / Math.pow(height, 2));
+    return BMI
+}
+ var bmi = bmiCalculator(65, 1.8);
+console.log("Your BMI is: " + bmi);
+
+
+
+
+/* function changeLight(status){
       const bulb = document.getElementById("bulb");
       if (status === 'on'){
         bulb.src = "./assets/images/bulb on.png";
@@ -10,7 +22,7 @@ function changeLight(status){
 function getMilk(money, price) {   
     console.log("leave House");
     console.log("I can buy " + calcBottles(money, price) + " bottles of milk");
-    return calChange(money, price);
+    console.log("Hello master, here is your " + calChange(money, price) + " change") ;
 }
 
 function calcBottles(money, price) {
@@ -22,4 +34,5 @@ function calChange(money, price) {
     return leftoverMoney;
 }
   
-console.log("Hello master, here is your " + getMilk(5, 1.5) + " change");
+getMilk(10, 3);
+*/
