@@ -1,5 +1,9 @@
-//BMI calculator
 
+
+
+
+/* 
+//BMI calculator
 function bmiCalculator(weight, height) {
     const BMI = Math.round(weight / Math.pow(height, 2));
     return BMI
@@ -8,9 +12,7 @@ function bmiCalculator(weight, height) {
 console.log("Your BMI is: " + bmi);
 
 
-
-
-/* function changeLight(status){
+function changeLight(status){
       const bulb = document.getElementById("bulb");
       if (status === 'on'){
         bulb.src = "./assets/images/bulb on.png";

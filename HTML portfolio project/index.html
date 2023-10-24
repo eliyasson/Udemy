@@ -14,8 +14,32 @@
   <button onclick="changeLight('on')">Turn the light on</button>
   <img id="bulb" src="./assets/images/bulb off.png" alt="light">
   <button onclick="changeLight('off')">Turn the light off</button>
+  <br><br>
+  <label for="person1">Your name</label>
+  <input type="text" id="person1Input" >
+  <label for="person2">Your crush</label>
+  <input type="text" id="person2Input">
+  <button onclick="loveCalculator()" type="submit">Calculate</button>
+  <div id="result"></div>
+
 
   <script>
+    
+    function loveCalculator() {
+      var person1 = document.getElementById("person1Input").value;
+      var person2 = document.getElementById("person1Input").value;
+      if (person1 == "" || person2 == ""){
+        alert ("Please enter both names");
+        } else {
+          var loveScore = Math.random() * 100;
+          loveScore = (loveScore + 1).toFixed();
+          document.getElementById("result").innerHTML = "Love score: "+loveScore+"%";
+        
+
+        }
+    }
+
+    
 
     /* var tweet = prompt("Enter your name here: ");
     var tweetLength = tweet.length;
