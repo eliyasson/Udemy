@@ -10,13 +10,16 @@ function changeLight(status){
 function getMilk(money, price) {   
     console.log("leave House");
     console.log("I can buy " + calcBottles(money, price) + " bottles of milk");
-    return money % price;
+    return calChange(money, price);
 }
 
 function calcBottles(money, price) {
     var numberOfBottle = Math.floor(money / price);
     return numberOfBottle;
 }
-  getMilk(5, 1.5);
-  var change = getMilk(5, 1.5);
-  console.log(change);
+function calChange(money, price) {
+    var leftoverMoney = money % price;
+    return leftoverMoney;
+}
+  
+console.log("Hello master, here is your " + getMilk(5, 1.5) + " change");
