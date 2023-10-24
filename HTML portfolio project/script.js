@@ -1,4 +1,4 @@
-function bmiCalculator(weight, height) {
+/*function bmiCalculator(weight, height) {
     const interpretation = weight / Math.pow(height, 2);
     if (interpretation < 18.5) {
         return "Your BMI is " + interpretation + " so you are underweight."
@@ -11,6 +11,28 @@ function bmiCalculator(weight, height) {
 }
 var bmi = bmiCalculator(100, 2);
 console.log(bmi);
+ */
+
+function leapYear(year) {
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                return "The year is leap year";
+            }
+        } else if(year % 100 !== 0){
+            return "The year is leap year";
+        }
+        
+    }  else  {
+        return "The year is not Leap year"
+    }
+
+}
+var result = leapYear(2020);
+console.log(result);
+
+
+
 
 /* 
 //BMI calculator
