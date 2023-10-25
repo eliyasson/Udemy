@@ -1,3 +1,6 @@
+
+
+
 /*function bmiCalculator(weight, height) {
     const interpretation = weight / Math.pow(height, 2);
     if (interpretation < 18.5) {
@@ -11,7 +14,7 @@
 }
 var bmi = bmiCalculator(100, 2);
 console.log(bmi);
- */
+ 
 
 function leapYear(year) {
     if (year % 4 === 0) {
