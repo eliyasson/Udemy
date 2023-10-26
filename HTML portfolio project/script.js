@@ -1,6 +1,13 @@
 
-
-
+function whosPaying(names) {
+    var randomNumber = Math.floor(Math.random() * names.length);
+    let randomPayer = names[randomNumber]
+    
+    return randomPayer + " is going to buy lunch today!";
+  
+}
+const lunchPayer = whosPaying(["Angela", "Ben", "Jenny", "Michael", "Chloe"]);
+console.log(lunchPayer);
 /*function bmiCalculator(weight, height) {
     const interpretation = weight / Math.pow(height, 2);
     if (interpretation < 18.5) {
