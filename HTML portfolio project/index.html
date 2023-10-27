@@ -29,16 +29,24 @@
   <input id="inputNames" type="text">
   <button onclick="whosPay()">Select</button>
   <h1 id="payList"></h1>
+  <br><br>
+  <!-- ----------------------------------------- -->
+  
+
 
   <script>
     
+
+
+
+    /*
     function whosPay() {
       let lists = document.getElementById("inputNames").value;
       let listName = lists.split(" ");
       let randomNumber = Math.floor(Math.random() * listName.length);
       document.getElementById("payList").innerHTML = listName[randomNumber] + " is today lunch payer!";
     }
-    /* 
+     
     let num = [];
     let i = 1;
     function calculateFizz() {

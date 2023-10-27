@@ -1,5 +1,11 @@
+let i = 99;
+while (i >= 0) {
+    console.log(i + " bottles of beer on the wall," + i + " bottles of beer.Take one down and pass it around," + (i-1) +" bottles of beer on the wall.");
+    i--;
+}
 
-function whosPaying(names) {
+
+/*function whosPaying(names) {
     var randomNumber = Math.floor(Math.random() * names.length);
     let randomPayer = names[randomNumber]
     
@@ -8,7 +14,9 @@ function whosPaying(names) {
 }
 const lunchPayer = whosPaying(["Angela", "Ben", "Jenny", "Michael", "Chloe"]);
 console.log(lunchPayer);
-/*function bmiCalculator(weight, height) {
+
+
+function bmiCalculator(weight, height) {
     const interpretation = weight / Math.pow(height, 2);
     if (interpretation < 18.5) {
         return "Your BMI is " + interpretation + " so you are underweight."
