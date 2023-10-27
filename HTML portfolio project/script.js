@@ -1,10 +1,19 @@
-let i = 99;
-while (i >= 0) {
-    console.log(i + " bottles of beer on the wall," + i + " bottles of beer.Take one down and pass it around," + (i-1) +" bottles of beer on the wall.");
-    i--;
+function fibonacciGenerator(n) {
+    var fibona = [];
+    for (let i = 0; i < n; i++) {
+        if(i === 0) {
+            fibona.push(0);
+        } else if (i === 1){
+            fibona.push(1)
+        } else {
+            fibona.push(fibona[i-1] + fibona[i-2]);
+        }
+       
+    } 
+    return fibona;
 }
-
-
+output = fibonacciGenerator(8);
+console.log(output);
 /*function whosPaying(names) {
     var randomNumber = Math.floor(Math.random() * names.length);
     let randomPayer = names[randomNumber]
