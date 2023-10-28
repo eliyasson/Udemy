@@ -1,4 +1,4 @@
-function fibonacciGenerator(n) {
+/*function fibonacciGenerator(n) {
     var fibona = [];
     for (let i = 0; i < n; i++) {
         if(i === 0) {
@@ -12,9 +12,9 @@ function fibonacciGenerator(n) {
     } 
     return fibona;
 }
-output = fibonacciGenerator(8);
+output = fibonacciGenerator(9);
 console.log(output);
-/*function whosPaying(names) {
+function whosPaying(names) {
     var randomNumber = Math.floor(Math.random() * names.length);
     let randomPayer = names[randomNumber]
     

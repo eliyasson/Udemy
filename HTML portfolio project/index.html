@@ -31,11 +31,30 @@
   <h1 id="payList"></h1>
   <br><br>
   <!-- ----------------------------------------- -->
-  
-
+  <h1>Fibonacci Calculator  </h1>
+  <label for="fibona">n: </label>
+  <input type="text" id="fname" name="fibona">
+  <button onclick="fibonacciCalculator()">Calculator</button>
+  <h1 id="values"></h1>
 
   <script>
-    
+    function fibonacciCalculator() {
+      let sequenceNumbers = [];
+      let inputValue = parseInt(document.getElementById("fname").value);
+      for (let i = 0; i <= inputValue; i++) {
+        
+        if (i === 0) {
+          sequenceNumbers.push(0);
+          
+        } else if (i === 1) {
+          sequenceNumbers.push(1);
+        } else {
+          sequenceNumbers.push(sequenceNumbers[i - 1] + sequenceNumbers[i - 2]);
+        }
+       
+      }
+      document.getElementById("values").innerHTML = sequenceNumbers.join(", ");
+    }
 
 
 
