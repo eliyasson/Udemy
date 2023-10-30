@@ -1,4 +1,55 @@
-/*function fibonacciGenerator(n) {
+function findEvenNumbers(...n) {
+   let outPuts = [];
+   
+    for (let i = 0; i < n.length; i++) {
+        if ( n[i] % 2 === 0) {
+          outPuts.push(n[i]);
+        }
+    }
+    return outPuts;
+}
+let evenNum = findEvenNumbers(2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(evenNum);
+
+function findAvarageNumber(...n) {
+    let num = 0;
+    for (let i = 0; i < n.length; i++) {
+         num = num + i;
+    }
+    return num / 2;
+}
+let output = findAvarageNumber(2, 3, 4, 5, 6);
+console.log(output);
+
+
+function findMiddleNumber(...n) {
+    let num = Math.floor(n.length / 2);
+    return n[num];
+}
+let result = findMiddleNumber(2, 3, 4, 5, 6);
+console.log(result);
+
+
+
+/*function fibonacciCalculator() {
+    let sequenceNumbers = [];
+    let inputValue = parseInt(document.getElementById("fname").value);
+    for (let i = 0; i <= inputValue; i++) {
+      
+      if (i === 0) {
+        sequenceNumbers.push(0);
+        
+      } else if (i === 1) {
+        sequenceNumbers.push(1);
+      } else {
+        sequenceNumbers.push(sequenceNumbers[i - 1] + sequenceNumbers[i - 2]);
+      }
+     
+    }
+    document.getElementById("values").innerHTML = sequenceNumbers.join(", ");
+  }
+
+function fibonacciGenerator(n) {
     var fibona = [];
     for (let i = 0; i < n; i++) {
         if(i === 0) {
@@ -23,7 +74,50 @@ function whosPaying(names) {
 }
 const lunchPayer = whosPaying(["Angela", "Ben", "Jenny", "Michael", "Chloe"]);
 console.log(lunchPayer);
+function whosPay() {
+      let lists = document.getElementById("inputNames").value;
+      let listName = lists.split(" ");
+      let randomNumber = Math.floor(Math.random() * listName.length);
+      document.getElementById("payList").innerHTML = listName[randomNumber] + " is today lunch payer!";
+    }
+     
+    let num = [];
+    let i = 1;
+    function calculateFizz() {
+      if (i % 3 === 0 && i % 5 === 0){
+        document.getElementById("fizzNum").innerHTML += " FizzBuzz<br> ";
+      } else if (i % 3 === 0) {
+        document.getElementById("fizzNum").innerHTML += " Fizz<br> ";
+      } else if (i % 5 === 0) {
+        document.getElementById("fizzNum").innerHTML += " buzz<br> ";
+      } else {
+        document.getElementById("fizzNum").innerHTML += i + "<br>";
+      }
+      i++;
+    }
+    
+     
+    var name = ["eliyas", "bonu", "esayas", "amanuel"];
+    var userName = prompt("enter name: ");
+    if (name.includes(userName)) {
+      alert("hey, Welcom");
+    } else {
+      alert("you are not in our list");
+    }
+    
+    
+    function loveCalculator() {
+      var person1 = document.getElementById("person1Input").value;
+      var person2 = document.getElementById("person1Input").value;
+      if (person1 == "" || person2 == ""){
+        alert ("Please enter both names");
+        } else {
+          var loveScore = Math.random() * 100;
+          loveScore = (loveScore + 1).toFixed();
+          document.getElementById("result").innerHTML = "Love score: "+loveScore+"%";
+        
 
+        }
 
 function bmiCalculator(weight, height) {
     const interpretation = weight / Math.pow(height, 2);

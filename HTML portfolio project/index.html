@@ -6,7 +6,7 @@
     <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
     <title>Eliyas Portfolio</title>
     <link rel="stylesheet" href="style.css">  
-    <script src="script.js"></script> 
+    
 </head>
 <body>
   <h1>Javascript</h1>
@@ -37,81 +37,7 @@
   <button onclick="fibonacciCalculator()">Calculator</button>
   <h1 id="values"></h1>
 
-  <script>
-    function fibonacciCalculator() {
-      let sequenceNumbers = [];
-      let inputValue = parseInt(document.getElementById("fname").value);
-      for (let i = 0; i <= inputValue; i++) {
-        
-        if (i === 0) {
-          sequenceNumbers.push(0);
-          
-        } else if (i === 1) {
-          sequenceNumbers.push(1);
-        } else {
-          sequenceNumbers.push(sequenceNumbers[i - 1] + sequenceNumbers[i - 2]);
-        }
-       
-      }
-      document.getElementById("values").innerHTML = sequenceNumbers.join(", ");
-    }
-
-
-
-    /*
-    function whosPay() {
-      let lists = document.getElementById("inputNames").value;
-      let listName = lists.split(" ");
-      let randomNumber = Math.floor(Math.random() * listName.length);
-      document.getElementById("payList").innerHTML = listName[randomNumber] + " is today lunch payer!";
-    }
-     
-    let num = [];
-    let i = 1;
-    function calculateFizz() {
-      if (i % 3 === 0 && i % 5 === 0){
-        document.getElementById("fizzNum").innerHTML += " FizzBuzz<br> ";
-      } else if (i % 3 === 0) {
-        document.getElementById("fizzNum").innerHTML += " Fizz<br> ";
-      } else if (i % 5 === 0) {
-        document.getElementById("fizzNum").innerHTML += " buzz<br> ";
-      } else {
-        document.getElementById("fizzNum").innerHTML += i + "<br>";
-      }
-      i++;
-    }
-    
-     
-    var name = ["eliyas", "bonu", "esayas", "amanuel"];
-    var userName = prompt("enter name: ");
-    if (name.includes(userName)) {
-      alert("hey, Welcom");
-    } else {
-      alert("you are not in our list");
-    }
-    
-    
-    function loveCalculator() {
-      var person1 = document.getElementById("person1Input").value;
-      var person2 = document.getElementById("person1Input").value;
-      if (person1 == "" || person2 == ""){
-        alert ("Please enter both names");
-        } else {
-          var loveScore = Math.random() * 100;
-          loveScore = (loveScore + 1).toFixed();
-          document.getElementById("result").innerHTML = "Love score: "+loveScore+"%";
-        
-
-        }
-    }
-
-    
-
-    var tweet = prompt("Enter your name here: ");
-    var tweetLength = tweet.length;
-    var firstLetter = tweet.slice(0, 1).toUpperCase();
-    var restLetter = tweet.slice(1, tweetLength).toLowerCase();
-    alert("Hello " + firstLetter + restLetter); */
+  <script src="script.js" charset="UTF-8">
   </script>
 </body>
 </html>
