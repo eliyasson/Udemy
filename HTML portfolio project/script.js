@@ -1,4 +1,26 @@
-function findEvenNumbers(...n) {
+function diceeChallenge() {
+  let num = Math.floor((Math.random()*6) + 1);
+  document.getElementById("dices").innerHTML = "Dice number: " + num;
+  if (num === 1) {
+    document.getElementById("dices").src = "./assets/images/dice1.png"
+  } else if (num === 2) {
+    document.getElementById("dices").src = "./assets/images/dice2.png"
+  } else if (num === 3) {
+    document.getElementById("dices").src = "./assets/images/dice3.png"
+  } else if (num === 4) {
+    document.getElementById("dices").src = "./assets/images/dice4.png"
+  } else if (num === 5) {
+    document.getElementById("dices").src = "./assets/images/dice5.png"
+  } else if(num === 56) {
+    document.getElementById("dices").src = "./assets/images/dice6.png"
+  } 
+  
+}
+
+
+
+
+/*function findEvenNumbers(...n) {
    let outPuts = [];
    
     for (let i = 0; i < n.length; i++) {
@@ -31,7 +53,7 @@ console.log(result);
 
 
 
-/*function fibonacciCalculator() {
+function fibonacciCalculator() {
     let sequenceNumbers = [];
     let inputValue = parseInt(document.getElementById("fname").value);
     for (let i = 0; i <= inputValue; i++) {
@@ -47,7 +69,7 @@ console.log(result);
      
     }
     document.getElementById("values").innerHTML = sequenceNumbers.join(", ");
-  }
+}
 
 function fibonacciGenerator(n) {
     var fibona = [];
