@@ -1,19 +1,18 @@
 function diceeChallenge() {
-  let num = Math.floor((Math.random()*6) + 1);
-  document.getElementById("dices").innerHTML = "Dice number: " + num;
-  if (num === 1) {
-    document.getElementById("dices").src = "./assets/images/dice1.png"
-  } else if (num === 2) {
-    document.getElementById("dices").src = "./assets/images/dice2.png"
-  } else if (num === 3) {
-    document.getElementById("dices").src = "./assets/images/dice3.png"
-  } else if (num === 4) {
-    document.getElementById("dices").src = "./assets/images/dice4.png"
-  } else if (num === 5) {
-    document.getElementById("dices").src = "./assets/images/dice5.png"
-  } else if(num === 56) {
-    document.getElementById("dices").src = "./assets/images/dice6.png"
-  } 
+  let num1 = Math.floor((Math.random()*6) + 1);
+  let num2 = Math.floor((Math.random()*6) + 1);
+  
+  document.getElementById("dices1").src = "./assets/images/dice" + num1 + ".png";
+  document.getElementById("dices2").src ="./assets/images/dice" + num2 + ".png";
+  
+
+  if (num1 > num2) {
+    document.getElementById("winer").innerHTML = "Player 1 wins!";
+  } else if (num1 < num2){
+    document.getElementById("winer").innerHTML = "Player 2 wins!";
+  } else {
+    document.getElementById("winer").innerHTML = "It's a draw! Try again!";
+  }
   
 }
 
