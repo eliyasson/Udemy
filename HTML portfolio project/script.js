@@ -1,22 +1,18 @@
-function diceeChallenge() {
-  let num1 = Math.floor((Math.random()*6) + 1);
-  let num2 = Math.floor((Math.random()*6) + 1);
-  
-  document.getElementById("dices1").src = "./assets/images/dice" + num1 + ".png";
-  document.getElementById("dices2").src ="./assets/images/dice" + num2 + ".png";
-  
+function diceRoller() {
+  let number = Math.floor(Math.random() * 6) + 1;
+  let number1 = Math.floor(Math.random() * 6) + 1;
 
-  if (num1 > num2) {
-    document.getElementById("winer").innerHTML = "Player 1 wins!";
-  } else if (num1 < num2){
-    document.getElementById("winer").innerHTML = "Player 2 wins!";
+  document.getElementById("diceImage1").src = "./assets/images/dice" + number + ".png";
+  document.getElementById("diceImage2").src = "./assets/images/dice" + number1 + ".png";
+
+  if (number > number1) {
+    document.getElementById("diceResult").innerHTML = "Player 1 wons";
+  } else if (number < number1) {
+    document.getElementById("diceResult").innerHTML = "Player 2 wons";
   } else {
-    document.getElementById("winer").innerHTML = "It's a draw! Try again!";
+    document.getElementById("diceResult").innerHTML = "Try again";
   }
-  
 }
-
-
 
 
 /*function findEvenNumbers(...n) {
