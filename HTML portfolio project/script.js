@@ -1,10 +1,15 @@
-document.addEventListener("click", myFunction);
 
-function myFunction() {
-  document.getElementById("demo").style.color = "red";
-  document.querySelector("h1").style.fontSize = "6rem";
-  document.querySelector("h2").style.visibility = "hidden";
 
+document.getElementById("myP").addEventListener("click", 
+function() {
+  myDisplay("text p")
+});
+document.getElementById("myDiv").addEventListener("click", function() {
+  myDisplay("text div")
+});
+
+function myDisplay(text) {
+  document.getElementById("demo").innerHTML += text + "<br>";
 }
 
 
