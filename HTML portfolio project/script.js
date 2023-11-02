@@ -1,3 +1,17 @@
+document.addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").style.color = "red";
+  document.querySelector("h1").style.fontSize = "6rem";
+  document.querySelector("h2").style.visibility = "hidden";
+
+}
+
+
+
+
+
+/*
 function diceRoller() {
   let number = Math.floor(Math.random() * 6) + 1;
   let number1 = Math.floor(Math.random() * 6) + 1;
@@ -14,8 +28,7 @@ function diceRoller() {
   }
 }
 
-
-/*function findEvenNumbers(...n) {
+function findEvenNumbers(...n) {
    let outPuts = [];
    
     for (let i = 0; i < n.length; i++) {
