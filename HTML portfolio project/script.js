@@ -1,14 +1,13 @@
-
 let selector = document.querySelector("button");
+
 function randomNumber(num) {
   return Math.floor(Math.random() * (num + 1));
 };
-selector.addEventListener("click", randomColor)
-function randomColor() {
-  let rndCol = `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
-  document.body.style.backgroundColor = rndCol;
-}
 
+selector.addEventListener("click", () => {
+  let randomColor = `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
+  document.body.style.backgroundColor = randomColor;
+})
 
 /*
 document.getElementById("myP").addEventListener("click", 
