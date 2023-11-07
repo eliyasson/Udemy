@@ -1,5 +1,16 @@
 
+let selector = document.querySelector("button");
+function randomNumber(num) {
+  return Math.floor(Math.random() * (num + 1));
+};
+selector.addEventListener("click", randomColor)
+function randomColor() {
+  let rndCol = `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
+  document.body.style.backgroundColor = rndCol;
+}
 
+
+/*
 document.getElementById("myP").addEventListener("click", 
 function() {
   myDisplay("text p")
@@ -16,7 +27,7 @@ function myDisplay(text) {
 
 
 
-/*
+
 function diceRoller() {
   let number = Math.floor(Math.random() * 6) + 1;
   let number1 = Math.floor(Math.random() * 6) + 1;
