@@ -1,3 +1,24 @@
+const radius = [2, 3, 5, 8];
+const area = function(radius) {
+  return Math.PI * radius * radius;
+}
+const diameter = function(radius) {
+  return 2 * radius;
+}
+// a reasuable function to calculate area, diameter and etc
+const calculate = function(radius, logic) {
+  const output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(logic(radius[i]));
+    
+  }
+  return output;
+}
+
+
+
+/*
+
 function multiply(num1, num2) {
   return num1 * num2;
 }
@@ -24,7 +45,7 @@ selector.addEventListener("click", () => {
   document.body.style.backgroundColor = randomColor;
 })
 
-/*
+
 document.getElementById("myP").addEventListener("click", 
 function() {
   myDisplay("text p")
