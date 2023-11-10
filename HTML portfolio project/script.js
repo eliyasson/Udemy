@@ -10,18 +10,21 @@ function calculate() {
   let inputValues = document.getElementById("radius").value;
   let inputs = inputValues.split(", ").map(Number);
 
-  let results_area = [];
-  let results_diameter = [];
+  let result_container = document.getElementById("results");
+  result_container.innerHTML = ""
+
   for(let i = 0; i < inputs.length; i++) {
-    
-    let areaResult = calculate_area(inputs[i]).toFixed(2);
-    let diameterResult = calculate_diameter(inputs[i]);
-    results_area.push(areaResult);
-    results_diameter.push(diameterResult);
+    let radius = inputs[i];
+    let areaResult = calculate_area(radius).toFixed(2);
+    let diameterResult = calculate_diameter(radius);
+
+    let listItem = document.createElement("li");
+    listItem.innerHTML = `Radius: ${radius}, Area: ${areaResult}, Diameter: ${diameterResult}`;
+    result_container.appendChild(listItem);
     
   }
-  document.getElementById("area").innerHTML = results_area.join(', ');
-  document.getElementById("diameter").innerHTML = results_diameter.join(', ');
+  //document.getElementById("results").innerHTML = results_area.join(', ');
+  //document.getElementById("results").innerHTML = results_diameter.join(', ');
   
 }
 
