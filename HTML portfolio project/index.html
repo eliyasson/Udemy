@@ -9,12 +9,18 @@
     
 </head>
 <body>
-  <h1>The document object</h1>
-  <h2>The addEvent listener</h2>
-  <button>Click to generate random color</button>
+  <h2>Calculate the Area and diameter of a circle</h2>
+  <label for="radius">Enter Radius:</label>
+  <input id="radius" type="text">
+  <button onclick="calculate()">Calculate</button>
+  <p>Area: <span id="area"></span></p>
+  <p>Diameter: <span id="diameter"></span></p>
+  
 
  
  <!-- 
+  <h2>The addEvent listener</h2>
+  <button>Click to generate random color</button>
   <button class="btn" onclick="diceRoller()">Dice Roller</button>
   <div class="dice-container">
     <img id="diceImage1" src="./assets/images/dice.png" alt="dice" height="250" width="250">

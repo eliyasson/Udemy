@@ -1,20 +1,29 @@
-const radius = [2, 3, 5, 8];
-const area = function(radius) {
+
+const calculate_area = function(radius) {
   return Math.PI * radius * radius;
 }
-const diameter = function(radius) {
+const calculate_diameter = function(radius) {
   return 2 * radius;
 }
 // a reasuable function to calculate area, diameter and etc
-const calculate = function(radius, logic) {
-  const output = [];
-  for (let i = 0; i < radius.length; i++) {
-    output.push(logic(radius[i]));
+function calculate() {
+  let inputValues = document.getElementById("radius").value;
+  let inputs = inputValues.split(", ").map(Number);
+
+  let results_area = [];
+  let results_diameter = [];
+  for(let i = 0; i < inputs.length; i++) {
+    
+    let areaResult = calculate_area(inputs[i]).toFixed(2);
+    let diameterResult = calculate_diameter(inputs[i]);
+    results_area.push(areaResult);
+    results_diameter.push(diameterResult);
     
   }
-  return output;
+  document.getElementById("area").innerHTML = results_area.join(', ');
+  document.getElementById("diameter").innerHTML = results_diameter.join(', ');
+  
 }
-
 
 
 /*
