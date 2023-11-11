@@ -9,7 +9,7 @@ function Person(name, age, workPermit, language) {
 const bellBoy = new Person("John", 26, true, ["French", "English"]);
 const bellBoy2 = new Person("Timothy", 46, true, ["French", "English"]);
 
-document.getElementById("demo").innerHTML = "My name is " + bellBoy.name;
+document.getElementById("demo").innerHTML = `My name is ${bellBoy.name}`;
 
 
 
