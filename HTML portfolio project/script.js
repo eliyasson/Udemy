@@ -1,4 +1,19 @@
+function Person(name, age, workPermit, language) {
+    this.name = name;
+    this.age = age;
+    this.hasWorkPermit = workPermit;
+    this.language = language;
+}
+//Objects of the same type are created by calling the constructor function with the new keyword:
 
+const bellBoy = new Person("John", 26, true, ["French", "English"]);
+const bellBoy2 = new Person("Timothy", 46, true, ["French", "English"]);
+
+document.getElementById("demo").innerHTML = "My name is " + bellBoy.name;
+
+
+
+/*
 const calculate_area = function(radius) {
   return Math.PI * radius * radius;
 }
@@ -29,7 +44,7 @@ function calculate() {
 }
 
 
-/*
+
 
 function multiply(num1, num2) {
   return num1 * num2;
