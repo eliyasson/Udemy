@@ -1,3 +1,19 @@
+
+
+//function
+function great(name, callback) {
+  console.log("Hi " + name);
+  callback();
+}
+//callBack function
+function callMe() {
+  console.log("I am callBack function")
+}
+
+//passing functions as an argument
+great("Eliyas", callMe);
+
+/*
 function Person(name, age, workPermit, language) {
     this.name = name;
     this.age = age;
@@ -13,7 +29,7 @@ document.getElementById("demo").innerHTML = `My name is ${bellBoy.name}`;
 
 
 
-/*
+
 const calculate_area = function(radius) {
   return Math.PI * radius * radius;
 }
