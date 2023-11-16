@@ -1,5 +1,26 @@
+/* Write a function that takes a ph value and 
+returns whether the value is acidic, neutral or alkaline. 
+(PH value < 7 is acidic, 7 is neutral, > 7 alkaline)
+*/
+
+function phCalculator() {
+  let phvalues = document.getElementById("phValue").value;
+  if (phvalues < 7 && phvalues > 14) {
+  document.getElementById("result").innerHTML = "It is Acidic!";
+  } else if (phvalues > 7 && phvalues <= 14) {
+    document.getElementById("result").innerHTML = "It is Alkaline!";
+  } else if (phvalues == 7) {
+    document.getElementById("result").innerHTML = "It is Neutral!";
+  } else {
+    document.getElementById("result").innerHTML = "ph should be between 0 and 14";
+  }
+}
 
 
+
+
+
+/*
 //function
 function great(name, callback) {
   console.log("Hi " + name);
@@ -13,7 +34,7 @@ function callMe() {
 //passing functions as an argument
 great("Eliyas", callMe);
 
-/*
+
 function Person(name, age, workPermit, language) {
     this.name = name;
     this.age = age;
