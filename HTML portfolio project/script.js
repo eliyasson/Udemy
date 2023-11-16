@@ -4,16 +4,19 @@ returns whether the value is acidic, neutral or alkaline.
 */
 
 function phCalculator() {
-  let phvalues = document.getElementById("phValue").value;
-  if (phvalues < 7 && phvalues >= 0) {
-  document.getElementById("result").innerHTML = "It is Acidic!";
-  } else if (phvalues > 7 && phvalues <= 14) {
-    document.getElementById("result").innerHTML = "It is Alkaline!";
-  } else if (phvalues == 7) {
-    document.getElementById("result").innerHTML = "It is Neutral!";
+  let phvalues = parseFloat(document.getElementById("phValue").value);
+  if (phvalues >= 0 && phvalues <= 14) {
+    if (phvalues < 7 ) {
+    document.getElementById("result").innerHTML = "It is Acidic!";
+    } else if (phvalues > 7) {
+      document.getElementById("result").innerHTML = "It is Alkaline!";
+    } else {
+      document.getElementById("result").innerHTML = "It is Neutral!";
+    } 
   } else {
     document.getElementById("result").innerHTML = "ph should be between 0 and 14";
   }
+  
 }
 
 
