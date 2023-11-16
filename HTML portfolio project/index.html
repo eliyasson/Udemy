@@ -9,10 +9,22 @@
     
 </head>
 <body>
-  <label for="phValue"></label>
-  <input id="phValue" type="text">
-  <button onclick="phCalculator()">Calculate</button>
-  <h1 id="result"></h1>
+  <div class="container">
+    <label for="shop">Choose country: </label>
+    <select name="shop" id="shopping">
+      <option value="eu">EU</option>
+      <option value="usa">USA</option>
+      <option value="canada">Canada</option>
+      <option value="other">Other</option>
+    </select>
+    <br><br>
+    <label for="price">Enter Price: </label>
+    <input id="price" type="text">
+    <br><br>
+    <button onclick="onlineShop()">Calculate</button>
+    <h2 id="result"></h2>
+  </div>
+
 
 
 

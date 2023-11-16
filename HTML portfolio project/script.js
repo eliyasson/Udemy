@@ -1,7 +1,34 @@
-/* Write a function that takes a ph value and 
+/* You want to buy something from an online shop. 
+The seller charges different prices for shipping cost based on location. 
+The shipping cost is 5€ for EU,  15€ for US & Canada, 20€ else where. 
+Write a function that takes the cost of the product and location. 
+It should print the amount of money you have to pay as:
+"You have to pay a total of 35€, 30€ for the product and 5€ for shipping"
+*/
+function onlineShop() {
+  let country = document.getElementById("shopping").value.toLowerCase();
+  let price = parseFloat(document.getElementById("price").value);
+  let output = document.getElementById("result");
+  let shippingCost;
+
+  if(country === "eu") {
+    shippingCost = price + 5;
+    output.innerHTML = "You have to pay a total of " + shippingCost + "€, " + price + "€ for the product and 5€ for shipping";
+  } else if(country === "usa" || country === "canada") {
+    shippingCost = price + 15;
+    output.innerHTML = "You have to pay a total of " + shippingCost + "€, " + price + "€ for the product and 15€ for shipping";
+  } else {
+    shippingCost = price + 20;
+    output.innerHTML = "You have to pay a total of " + shippingCost + "€, " + price + "€ for the product and 20€ for shipping";
+  }
+}
+
+
+/*
+ Write a function that takes a ph value and 
 returns whether the value is acidic, neutral or alkaline. 
 (PH value < 7 is acidic, 7 is neutral, > 7 alkaline)
-*/
+
 
 function phCalculator() {
   let phvalues = parseFloat(document.getElementById("phValue").value);
@@ -19,11 +46,6 @@ function phCalculator() {
   
 }
 
-
-
-
-
-/*
 //function
 function great(name, callback) {
   console.log("Hi " + name);
