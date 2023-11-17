@@ -1,4 +1,4 @@
-const products = [
+let products = [
   "iphone 15 pro Max",
   "iphone 15 pro",
   "iPhone 13", 
@@ -38,11 +38,22 @@ let newProducts = [
   "Motorola Moto G31", 
   "Honor X7"
 ];
-const productList2 = document.getElementById("productList");
+
 newProducts.forEach(product => {
   let newListItem = document.createElement("li");
   newListItem.textContent = product;
-  productList2.appendChild(newListItem);
+  productList.appendChild(newListItem);
+  products.push(product);
+})
+// Task 2. remove "Xiaomi Redmi 9A", "Google Pixel 6 Pro" from the list
+const removeItem = ["Xiaomi Redmi 9A", "Google Pixel 6 Pro"];
+products = products.filter(product => !removeItem.includes(product));
+productList.innerHTML = "";
+
+products.forEach(product => {
+  let newListItem = document.createElement("li");
+  newListItem.textContent = product;
+  productList.appendChild(newListItem);
 })
 
 
