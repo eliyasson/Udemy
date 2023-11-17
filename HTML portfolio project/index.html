@@ -10,6 +10,18 @@
 </head>
 <body>
   <div class="container">
+    <input id="inputValue" type="text">
+    <button onclick="addProduct()">Add Product</button>
+    <ol id="productList">
+    </ol>
+    
+  </div>
+    <ol id="favorites"></ol>
+    
+
+  <!--  
+  -----------------------------------------
+  <div class="container">
     <label for="shop">Choose country: </label>
     <select name="shop" id="shopping">
       <option value="eu">EU</option>
@@ -24,18 +36,14 @@
     <button onclick="onlineShop()">Calculate</button>
     <h2 id="result"></h2>
   </div>
-
-
-
-
-  <!-- 
+-----------------------------------------
   <h2>Calculate the Area and diameter of a circle</h2>
   <label for="radius">Enter Radius:</label>
   <input id="radius" type="text">
   <button onclick="calculate()">Calculate</button>
   <p>Results: </p>
   <ul id="results"></ul>
-  
+  -----------------------------------------
   <h2>The addEvent listener</h2>
   <button>Click to generate random color</button>
   <button class="btn" onclick="diceRoller()">Dice Roller</button>

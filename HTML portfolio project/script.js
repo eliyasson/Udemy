@@ -1,10 +1,65 @@
-/* You want to buy something from an online shop. 
+const products = [
+  "iphone 15 pro Max",
+  "iphone 15 pro",
+  "iPhone 13", 
+  "iPhone 13 Pro",
+  "iPhone 13 Pro Max",
+  "iPhone 12",
+  "iPhone 12 Pro",
+  "OnePlus 10 Pro",
+  "OnePlus 9",
+  "Nokia G20",
+  "Samsung Galaxy S20",
+  "Samsung Galaxy S21",
+  "Samsung Galaxy S22",
+  "Sony Xperia 10",
+  "Xiaomi Redmi 9A",
+];
+
+const favorites = [];
+
+const productList = document.getElementById("productList");
+products.forEach((product) => {
+  let listItem = document.createElement("li");
+  listItem.textContent = product;
+  productList.appendChild(listItem);
+
+});
+function addProduct() {
+  let inputsValue = document.getElementById("inputValue").value.trim();
+  const newListItem = document.createElement("li");
+  newListItem.textContent = inputsValue;
+  productList.appendChild(newListItem);
+  products.push(inputsValue);
+  document.getElementById("inputValue").value = '';
+}
+let newProducts = [
+  "Google Pixel 6 Pro", 
+  "Motorola Moto G31", 
+  "Honor X7"
+];
+const productList2 = document.getElementById("productList");
+newProducts.forEach(product => {
+  let newListItem = document.createElement("li");
+  newListItem.textContent = product;
+  productList2.appendChild(newListItem);
+})
+
+
+
+
+
+
+
+
+/* 
+You want to buy something from an online shop. 
 The seller charges different prices for shipping cost based on location. 
 The shipping cost is 5€ for EU,  15€ for US & Canada, 20€ else where. 
 Write a function that takes the cost of the product and location. 
 It should print the amount of money you have to pay as:
 "You have to pay a total of 35€, 30€ for the product and 5€ for shipping"
-*/
+
 function onlineShop() {
   let country = document.getElementById("shopping").value.toLowerCase();
   let price = parseFloat(document.getElementById("price").value);
@@ -18,11 +73,13 @@ function onlineShop() {
     shippingCost = price + 15;
     output.innerHTML = "You have to pay a total of " + shippingCost + "€, " + price + "€ for the product and 15€ for shipping";
   } else {
-    shippingCost = price + 20;
+    shippingCost = price + 20; 
     output.innerHTML = "You have to pay a total of " + shippingCost + "€, " + price + "€ for the product and 20€ for shipping";
   }
 }
-
+let words = ["Apple", "Banana", "orange"];
+const capitalization = words.slice(1, 3);
+console.log(capitalization);
 
 /*
  Write a function that takes a ph value and 
