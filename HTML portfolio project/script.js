@@ -17,44 +17,79 @@ let products = [
 ];
 
 const favorites = [];
+function productLists() {
+  const productList = document.getElementById("productList");
+  productList.innerHTML = "";
+  products.forEach((product) => {
+    let listItem = document.createElement("li");
+    listItem.textContent = product;
+    productList.appendChild(listItem);
+  });
+}
 
-const productList = document.getElementById("productList");
-products.forEach((product) => {
-  let listItem = document.createElement("li");
-  listItem.textContent = product;
-  productList.appendChild(listItem);
-
-});
 function addProduct() {
+  const productList = document.getElementById("productList");
   let inputsValue = document.getElementById("inputValue").value.trim();
   const newListItem = document.createElement("li");
   newListItem.textContent = inputsValue;
   productList.appendChild(newListItem);
   products.push(inputsValue);
   document.getElementById("inputValue").value = '';
+
+  /*let newProducts = [
+    "Google Pixel 6 Pro", 
+    "Motorola Moto G31", 
+    "Honor X7"
+  ];
+
+  newProducts.forEach(product => {
+    let newListItem = document.createElement("li");
+    newListItem.textContent = product;
+    productList.appendChild(newListItem);
+    products.push(product);
+  })*/
 }
-let newProducts = [
-  "Google Pixel 6 Pro", 
-  "Motorola Moto G31", 
-  "Honor X7"
-];
-
-newProducts.forEach(product => {
-  let newListItem = document.createElement("li");
-  newListItem.textContent = product;
-  productList.appendChild(newListItem);
-  products.push(product);
-})
 // Task 2. remove "Xiaomi Redmi 9A", "Google Pixel 6 Pro" from the list
-const removeItem = ["Xiaomi Redmi 9A", "Google Pixel 6 Pro"];
-products = products.filter(product => !removeItem.includes(product));
-productList.innerHTML = "";
+function removeItems() {
+  const productList = document.getElementById("productList");
+  const removeItem = ["Xiaomi Redmi 9A", "Google Pixel 6 Pro"];
+  products = products.filter(product => !removeItem.includes(product));
+  productList.innerHTML = "";
 
-products.forEach(product => {
-  let newListItem = document.createElement("li");
-  newListItem.textContent = product;
-  productList.appendChild(newListItem);
-})
+  products.forEach(product => {
+    let newListItem = document.createElement("li");
+    newListItem.textContent = product;
+    productList.appendChild(newListItem);
+  })
+}
+
+function Galaxy_only() {
+  const productList = document.getElementById("productList");
+  products = products.filter((x) => x.includes("Galaxy"));
+  productList.innerHTML = "";
+  products.forEach(product => {
+    let newListItem = document.createElement("li");
+    newListItem.textContent = product;
+    productList.appendChild(newListItem);
+  })
+}
+
+function favoriteItems() {
+  const favoriteList = document.getElementById("productList");
+  favoriteList.innerHTML = "";
+  let favorite = [
+    "Google Pixel 6 Pro", 
+    "OnePlus 10 Pro", 
+    "iPhone 13 Pro Max"
+  ]
+  favorite.forEach(product => {
+    let newListItem = document.createElement("li");
+    newListItem.textContent = product;
+    favoriteList.appendChild(newListItem);
+    favorite.push(product);
+  })
+}
+
 
 
 
