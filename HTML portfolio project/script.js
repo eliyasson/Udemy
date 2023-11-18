@@ -16,15 +16,16 @@ let products = [
   "Xiaomi Redmi 9A",
 ];
 
-const favorites = [];
+let favorites = [];
 function productLists() {
   const productList = document.getElementById("productList");
   productList.innerHTML = "";
-  products.forEach((product) => {
+  for (let i = 0; i < products.length; i++) {
     let listItem = document.createElement("li");
-    listItem.textContent = product;
+    listItem.textContent = products[i];
     productList.appendChild(listItem);
-  });
+  }
+ 
 }
 
 function addProduct() {
@@ -52,7 +53,10 @@ function addProduct() {
 // Task 2. remove "Xiaomi Redmi 9A", "Google Pixel 6 Pro" from the list
 function removeItems() {
   const productList = document.getElementById("productList");
-  const removeItem = ["Xiaomi Redmi 9A", "Google Pixel 6 Pro"];
+  const removeItem = [
+    "Xiaomi Redmi 9A", 
+    "Google Pixel 6 Pro"
+  ];
   products = products.filter(product => !removeItem.includes(product));
   productList.innerHTML = "";
 
@@ -75,7 +79,7 @@ function Galaxy_only() {
 }
 
 function favoriteItems() {
-  const favoriteList = document.getElementById("productList");
+  const favoriteList = document.getElementById("favorites");
   favoriteList.innerHTML = "";
   let favorite = [
     "Google Pixel 6 Pro", 
@@ -86,9 +90,23 @@ function favoriteItems() {
     let newListItem = document.createElement("li");
     newListItem.textContent = product;
     favoriteList.appendChild(newListItem);
-    favorite.push(product);
-  })
+    favorites.push(product);
+  });
+  favorites = favorites.filter((favorite) => favorite !== "OnePlus 10 Pro");
+  displayFavorites();
 }
+
+function displayFavorites() {
+  const favoriteList = document.getElementById("favorites");
+  favoriteList.innerHTML = ""; // Clear the list
+
+  favorites.forEach(product => {
+    let newListItem = document.createElement("li");
+    newListItem.textContent = product;
+    favoriteList.appendChild(newListItem);
+  });
+}
+
 
 
 
