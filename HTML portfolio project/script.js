@@ -107,7 +107,14 @@ function displayFavorites() {
   });
 }
 
-
+const proProducts = products.filter(product => product.includes("Pro"));
+// Displaying products with "Pro" in their names using forEach loop
+const productList = document.getElementById("productList"); // Assuming an HTML element with id="productList" exists
+proProducts.forEach(product => {
+  const listItem = document.createElement("li");
+  listItem.textContent = product;
+  productList.appendChild(listItem);
+});
 
 
 
