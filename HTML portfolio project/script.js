@@ -118,6 +118,11 @@ const filterProduct = products.map((product) => {
 })
 console.log(filterProduct);
 
+let length = products.map((product) => {
+  return product.split(" ").length;
+});
+console.log(length);
+
 
 
 
