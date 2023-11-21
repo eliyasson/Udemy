@@ -82,7 +82,14 @@ const getIngredientName = (recipes, recipeName) =>{
   return recipes.ingredients.map(ingredient => ingredient.name);
 }
 recipes = getIngredientName(recipes, "Lentil Bolognese");
-console.log(recipes)
+
+let favorites = [];
+const addToFavorite = (favorites, recipeName) => {
+  favorites.push(recipeName);
+  return favorites;
+}
+favorites = addToFavorite(favorites, lentilBolognese);
+console.log(favorites);
 
 /*
 let products = [
