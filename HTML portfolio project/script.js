@@ -1,11 +1,11 @@
 let products = [
   "iphone 15 pro Max",
   "iphone 15 pro",
-  "iPhone 13", 
-  "iPhone 13 Pro",
-  "iPhone 13 Pro Max",
-  "iPhone 12",
-  "iPhone 12 Pro",
+  "iphone 13", 
+  "iphone 13 Pro",
+  "iphone 13 Pro Max",
+  "iphone 12",
+  "iphone 12 Pro",
   "OnePlus 10 Pro",
   "OnePlus 9",
   "Nokia G20",
@@ -109,13 +109,14 @@ function displayFavorites() {
 
 const proProducts = products.filter(product => product.includes("Pro"));
 // Displaying products with "Pro" in their names using forEach loop
-const productList = document.getElementById("productList"); // Assuming an HTML element with id="productList" exists
-proProducts.forEach(product => {
-  const listItem = document.createElement("li");
-  listItem.textContent = product;
-  productList.appendChild(listItem);
-});
-
+const filterProduct = products.map((product) => {
+  if (product.includes("iphone")) {
+    return "iOS";
+  } else {
+    return "Android";
+  }
+})
+console.log(filterProduct);
 
 
 
