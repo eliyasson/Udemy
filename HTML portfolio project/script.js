@@ -76,11 +76,13 @@ const deleteRecipe = (recipes, recipeName) => {
   return updatedList;
 }
 recipes = deleteRecipe(recipes, "salmon soup");
-console.log(recipes);
 
-const getIngredientName = (recipes, recipeName) {
-  
+const getIngredientName = (recipes, recipeName) =>{
+  recipes =  recipes.find(recipe => recipe.name === recipeName);
+  return recipes.ingredients.map(ingredient => ingredient.name);
 }
+recipes = getIngredientName(recipes, "Lentil Bolognese");
+console.log(recipes)
 
 /*
 let products = [
