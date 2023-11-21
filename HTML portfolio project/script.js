@@ -50,6 +50,7 @@ const addRecipe = (recipes, recipe) => {
   }
   return recipes;
 }
+
 const lentilBolognese = { 
   name: "Lentil Bolognese",
   vegan: true,
@@ -69,7 +70,18 @@ const lentilBolognese = {
   ]
 };
 recipes = addRecipe(recipes, lentilBolognese);
+
+const deleteRecipe = (recipes, recipeName) => {
+ const updatedList =recipes.filter(recipe => recipe.name != recipeName);
+  return updatedList;
+}
+recipes = deleteRecipe(recipes, "salmon soup");
 console.log(recipes);
+
+const getIngredientName = (recipes, recipeName) {
+  
+}
+
 /*
 let products = [
   "iphone 15 pro Max",
