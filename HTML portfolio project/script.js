@@ -1,12 +1,85 @@
+function getRecipes() {
+  return [{
+    name: "salmon soup",
+    vegan: false,
+    ingredients: [{
+        name: "salmon",
+        quantity: 1,
+      }, {
+        name: "cream",
+        quantity: 2,
+      }, {
+        name: "milk",
+        quantity: 1,
+      }
+    ]
+  }, {
+    name: "carbonara",
+    vegan: false,
+    ingredients: [{
+        name: "pasta",
+        quantity: 1,
+      }, {
+        name: "cheese",
+        quantity: 5,
+      }, {
+        name: "milk",
+        quantity: 1,
+      }
+    ]
+  }, {
+    name: "rice bowl",
+    vegan: false,
+    ingredients: [{
+        name: "rice",
+        quantity: 2,
+      }, {
+        name: "water",
+        quantity: 1,
+      }
+    ]
+  }];
+}
+let  recipes = getRecipes();
+
+const addRecipe = (recipes, recipe) => {
+  if (recipe.name && recipe.vegan !== undefined) {
+    recipes.push(recipe);
+  } else {
+    console.log('Recipe is missing required fields (name or vegan status)');
+  }
+  return recipes;
+}
+const lentilBolognese = { 
+  name: "Lentil Bolognese",
+  vegan: true,
+  ingredients: [{
+      name: "lentil",
+      quantity: 2,
+    }, {
+      name: "tomatoes",
+      quantity: 3,
+    }, {
+      name: "pasta",
+      quantity: 1
+    }, {
+      name: "onion",
+      quantity: 1
+    }
+  ]
+};
+recipes = addRecipe(recipes, lentilBolognese);
+console.log(recipes);
+/*
 let products = [
   "iphone 15 pro Max",
   "iphone 15 pro",
   "iphone 13", 
-  "iphone 13 Pro",
+  "iphone 13 pro",
   "iphone 13 Pro Max",
   "iphone 12",
-  "iphone 12 Pro",
-  "OnePlus 10 Pro",
+  "iphone 12 pro",
+  "OnePlus 10 pro",
   "OnePlus 9",
   "Nokia G20",
   "Samsung Galaxy S20",
@@ -48,7 +121,7 @@ function addProduct() {
     newListItem.textContent = product;
     productList.appendChild(newListItem);
     products.push(product);
-  })*/
+  })
 }
 // Task 2. remove "Xiaomi Redmi 9A", "Google Pixel 6 Pro" from the list
 function removeItems() {
@@ -116,20 +189,13 @@ const filterProduct = products.map((product) => {
     return "Android";
   }
 })
-console.log(filterProduct);
 
 let length = products.map((product) => {
   return product.split(" ").length;
 });
-console.log(length);
 
+const endWithPro = products.filter((product) => product.endsWith("pro"));
 
-
-
-
-
-
-/* 
 You want to buy something from an online shop. 
 The seller charges different prices for shipping cost based on location. 
 The shipping cost is 5€ for EU,  15€ for US & Canada, 20€ else where. 
@@ -208,8 +274,6 @@ const bellBoy2 = new Person("Timothy", 46, true, ["French", "English"]);
 document.getElementById("demo").innerHTML = `My name is ${bellBoy.name}`;
 
 
-
-
 const calculate_area = function(radius) {
   return Math.PI * radius * radius;
 }
@@ -240,8 +304,6 @@ function calculate() {
 }
 
 
-
-
 function multiply(num1, num2) {
   return num1 * num2;
 }
@@ -253,9 +315,6 @@ function calculator(num1, num2, operator) {
   return operator(num1, num2)
 }
 console.log(calculator(2, 3, multiply)); // asking the calculator to multiply 2 and 3 using the multiply function.
-
-
-
 
 let selector = document.querySelector("button");
 
@@ -280,10 +339,6 @@ document.getElementById("myDiv").addEventListener("click", function() {
 function myDisplay(text) {
   document.getElementById("demo").innerHTML += text + "<br>";
 }
-
-
-
-
 
 
 function diceRoller() {
@@ -455,9 +510,6 @@ function leapYear(year) {
 }
 var result = leapYear(2020);
 console.log(result);
-
-
-
 
 /* 
 //BMI calculator
