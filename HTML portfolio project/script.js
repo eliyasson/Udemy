@@ -69,6 +69,21 @@ const lentilBolognese = {
     }
   ]
 };
+const ozzoChicken = {
+  name: "Ozzo Chicken",
+    vegan: false,
+    ingredients: [{
+        name: "spinach",
+        quantity: 1,
+      },{
+        name: "chicken",
+        quantity: 1,
+      },{
+        name: "sour cream",
+        quantity: 1,
+      }
+    ]
+}
 recipes = addRecipe(recipes, lentilBolognese);
 
 const deleteRecipe = (recipes, recipeName) => {
@@ -89,8 +104,15 @@ const addToFavorite = (favorites, recipeName) => {
   return favorites;
 }
 favorites = addToFavorite(favorites, lentilBolognese);
-console.log(favorites);
+favorites = addToFavorite(favorites, ozzoChicken);
 
+const removeRecipe = (favorites, recipeName) => {
+  let updatedFavorite = favorites.filter(favorite => favorite.name != recipeName);
+  return updatedFavorite;
+}
+favorites = removeRecipe(favorites, "Lentil Bolognese");
+favorites = removeRecipe(favorites, "Ozzo Chicken");
+console.log(favorites)
 /*
 let products = [
   "iphone 15 pro Max",
