@@ -112,7 +112,9 @@ const removeRecipe = (favorites, recipeName) => {
 }
 favorites = removeRecipe(favorites, "Lentil Bolognese");
 favorites = removeRecipe(favorites, "Ozzo Chicken");
-console.log(favorites)
+console.log(favorites);
+
+
 /*
 let products = [
   "iphone 15 pro Max",
