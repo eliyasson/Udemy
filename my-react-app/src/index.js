@@ -1,4 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
-ReactDOM.render(<h2>My favourite foods</h2>, document.getElementById("root"));
+const name = 'Eliyas';
+const randNum = Math.floor(Math.random() * 10);
+
+ReactDOM.render(
+  <div>
+    <h3>Hey {name}! </h3>
+    <p>Your lucky number is {randNum}</p>
+  </div>, 
+    document.getElementById("root"));
