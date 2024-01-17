@@ -2,20 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const name = "Eliyas";
-const currentDate = new Date();
-const year = currentDate.getFullYear();
+const date = new Date();
+const year = date.getFullYear();
+const time = date.getHours();
 
-const customeStyle = {
-  color: "red",
-  fontsize: "20px",
-  border: "1px solid black"
-};
+let greatings;
+if (time < 12) {
+  greatings = 'Good Morning';
+} else if (time >= 12  && time < 17 ) {
+  greatings = 'Good Afternoon';
+} else {
+  greatings = 'Good Evening';
+}
 
 ReactDOM.render(
   <>
-    <p style={customeStyle}>Created by {name}</p>
-    <p>Copyright {year}</p>
-    
-  </>, 
-    document.getElementById("root"));
+    <p>{greatings}</p>
+    <p>current date: {year}</p>
+    <p>current time: {time}</p>
+  </>
+,document.getElementById("root"));
