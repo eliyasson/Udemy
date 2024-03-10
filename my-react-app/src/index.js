@@ -20,7 +20,11 @@ function Contact(props) {
   return ( 
     <div>
       <h3>{props.name}</h3>
-
+      <img 
+          src={props.img}
+          alt='Ruth'
+       />
+      <p>{props.tel}</p>
     </div>
   );
 }
@@ -35,7 +39,10 @@ ReactDOM.render(
       email="b@gmail.com"
     />
     <Contact 
-      name="Ruth"/>
+      name="Ruth A"
+      img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
+      tel="0000000"
+    />
   </div>,
 
   document.getElementById("root")
