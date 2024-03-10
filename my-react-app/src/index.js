@@ -1,49 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './component/App';
 import './index.css';
-
-function Card(props) {
-  return (
-  <div>
-    <h2>{props.name}</h2>
-    <img
-      src={props.img}
-      alt="avatar_img"
-    />
-    <p>{props.tel}</p>
-    <p>{props.email}</p>
-  </div>
-);
-}
-
-function Contact(props) {
-  return ( 
-    <div>
-      <h3>{props.name}</h3>
-      <img 
-          src={props.img}
-          alt='Ruth'
-       />
-      <p>{props.tel}</p>
-    </div>
-  );
-}
+import Contacts from './contacts';
+import Card from './Card';
 
 ReactDOM.render(
-  <div>
-    <h1>My Contacts</h1>
-    <Card 
-      name="Beyonce"
-      img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-      tel="+123 4567 909"
-      email="b@gmail.com"
-    />
-    <Contact 
-      name="Ruth A"
-      img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-      tel="0000000"
-    />
-  </div>,
+  <>
+    <App />,
+    <h1 className="heading">My Contacts</h1>
+    {Contacts.map(contact => (
+      <Card
+      key={contact.name} // Use a unique key for each contact
+      name={contact.name}
+      img={contact.imgURL}
+      phone={contact.phone}
+      email={contact.email}
+      />
+    ))}
 
+  </>,
+  
   document.getElementById("root")
 );
