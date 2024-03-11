@@ -1,8 +1,18 @@
 import React from "react";
-import Card from "../Card";
+import Card from "./Card";
 import Contacts from "../contacts";
 import Avatar from "./Avatar";
 
+function CreatedCard(contact) {
+    return (
+        <Card 
+            name={contact.name}
+            img={contact.imgURL}
+            phone={contact.phone}
+            email={contact.email}
+        />
+    )
+}
 
 function App() {
     return (
@@ -12,27 +22,7 @@ function App() {
                 img={Contacts[3].imgURL}
             
             />
-            <Card 
-                name={Contacts[0].name}
-                img={Contacts[0].imgURL}
-                phone={Contacts[0].phone}
-                email={Contacts[0].email}
-
-            />
-            <Card 
-                name={Contacts[1].name}
-                img={Contacts[1].imgURL}
-                phone={Contacts[1].phone}
-                email={Contacts[1].email}
-
-            />
-            <Card 
-                name={Contacts[2].name}
-                img={Contacts[2].imgURL}
-                phone={Contacts[2].phone}
-                email={Contacts[2].email}
-
-            />
+            {Contacts.map(CreatedCard)}
         </div>
     )
 }
