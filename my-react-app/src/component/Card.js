@@ -1,5 +1,5 @@
 import React from "react";
-import '../index.css'
+
 import Avatar from "./Avatar";
 import Detail from "./Detail";
 
