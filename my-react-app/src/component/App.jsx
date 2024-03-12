@@ -4,10 +4,18 @@ import Contacts from "../contacts";
 import Avatar from "./Avatar";
 import Emojipedia from "../Emojipedia";
 
+
+const emojis = Emojipedia.map(emoji => {
+    return {
+        ...emoji,
+        meaning: emoji.meaning.substring(0, 100)
+    };
+});
+
 function CreatedCard(emoji) {
     return (
         <Card 
-            id={emoji.id}
+      
             key={emoji.id}
             emoji={emoji.emoji}
             name={emoji.name}
@@ -23,10 +31,9 @@ function App() {
             <span>emojipedia</span>
         </h1>
         <dl className="dictionary">
-            {Emojipedia.map(CreatedCard)}
+            {emojis.map(CreatedCard)}
         </dl>
         
-    
     </div>
 
         /* <div>
