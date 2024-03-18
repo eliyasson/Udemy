@@ -3,6 +3,7 @@ import Card from "./Card";
 import Contacts from "../contacts";
 import Avatar from "./Avatar";
 import Emojipedia from "../Emojipedia";
+import Login from "./Login";
 
 
 const emojis = Emojipedia.map(emoji => {
@@ -12,26 +13,24 @@ const emojis = Emojipedia.map(emoji => {
     };
 });
 
-function CreatedCard(emoji) {
-    return (
-        <Card 
-      
-            key={emoji.id}
-            emoji={emoji.emoji}
-            name={emoji.name}
-            meaning={emoji.meaning}
-        />
-    )
-}
 
 function App() {
     return (
     <div>
+        <Login />
         <h1>
             <span>emojipedia</span>
         </h1>
         <dl className="dictionary">
-            {emojis.map(CreatedCard)}
+            {emojis.map(emoji => (
+                <Card 
+                    key={emoji.id}
+                    emoji={emoji.emoji}
+                    name={emoji.name}
+                    meaning={emoji.meaning}
+                />
+           ))}
+
         </dl>
         
     </div>
