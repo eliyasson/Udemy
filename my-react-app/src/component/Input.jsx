@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Input() {
     return (
         <form className="form">

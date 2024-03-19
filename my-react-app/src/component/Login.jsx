@@ -1,21 +1,19 @@
 import React from "react";
 import Input from "./Input";
 
-const isLoggedIn = false;
+const isLoggedIn = false ? renderConditionally() : loginForm();
 
 function renderConditionally() {
-   
-    if (isLoggedIn === true){
-        return <h1>Hello</h1>
-    } else {
-        return <Input />
-    };
-
+    return <h1>Hello</h1>
+} 
+function loginForm() {
+    return <Input />
 }
+
 function Login() {
     return (
         <div className="container">
-            {renderConditionally()} 
+            {isLoggedIn} 
         </div>
     )
 }
