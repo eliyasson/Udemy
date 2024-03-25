@@ -13,12 +13,12 @@ const emojis = Emojipedia.map(emoji => {
     };
 });
 
-const userLoggedIn = true;
+
 
 function App() {
     return (
     <div>
-        <Login isLoggedIn={userLoggedIn}/>
+        <Login />
         <h1>
             <span>emojipedia</span>
         </h1>
