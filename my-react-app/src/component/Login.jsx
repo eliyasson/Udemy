@@ -9,10 +9,14 @@ function Login() {
         const now = new Date().toLocaleTimeString();
         setTime(now);
     }
-    setInterval(getTime, 1000);
+    function sayHi() {
+        console.log("Hey");
+    }
+   
     return (
         <div className="container">
            <h1>{time}</h1>
+           <h2>{sayHi}</h2>
             <form className="form">
                 <input type="text" placeholder="Username" />
                 <input type="password" placeholder="Password" />
