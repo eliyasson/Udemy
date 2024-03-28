@@ -1,26 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { ReactDOM } from "react";
+
 
 const currentTime = new Date().getHours();
+
+
+
 
 function Greatings() {
     return currentTime < 12 ? <h2>Good Morning!</h2> : <h2>Good afternoon!</h2>
 }
 
-function strike() {
-    document.getElementById("root").style.textDecoration = "line-through"
-}
-function unStrike() {
-    document.getElementById("root").style.textDecoration = null;
-}
 
 function Login() {
+    const [count, setCount]  = useState(0);
     const isLoggedIn = true;
 
+    function increament() {
+        setCount(count + 1);
+    }
     return (
         <div className="container">
-            <p>Buy house</p>
-            <button onClick={strike}>Change to strike through</button>
-            <button onClick={unStrike}>Change back</button>
+            <h1>{count}</h1>
+            <button onClick={increament}>+</button>
             <h2>{Greatings()}</h2>
             <form className="form">
                 <input type="text" placeholder="Username" />
