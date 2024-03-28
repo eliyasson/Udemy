@@ -1,24 +1,18 @@
 import React, { useState } from "react";
 import { ReactDOM } from "react";
 
-const currentTime = new Date().toLocaleTimeString();
-
+const now = new Date().toLocaleTimeString();
 function Login() {
-    const [time, setTime] = useState(new Date().toLocaleTimeString());
+    const [time, setTime] = useState(now);
 
     function getTime() {
-        const currentTime = new Date().toLocaleTimeString();
-        setTime(currentTime);
+        const now = new Date().toLocaleTimeString();
+        setTime(now);
     }
-    function sayHi() {
-        
-    }
-    
+    setInterval(getTime, 1000);
     return (
         <div className="container">
-            <h2>{time}</h2>
-            <h2>{time}</h2>
-            <button onClick={getTime}>Get Time</button>
+           <h1>{time}</h1>
             <form className="form">
                 <input type="text" placeholder="Username" />
                 <input type="password" placeholder="Password" />
@@ -27,4 +21,4 @@ function Login() {
         </div>
     )
 }
-export default Login; 
+export default Login;
