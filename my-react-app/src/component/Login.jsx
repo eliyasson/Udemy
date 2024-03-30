@@ -10,9 +10,9 @@ function Login() {
         setTime(now);
     }
     function sayHi() {
-        console.log("Hey");
+        
     }
-   
+    setInterval(getTime, 10000);
     return (
         <div className="container">
            <h1>{time}</h1>

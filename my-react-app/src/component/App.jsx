@@ -4,6 +4,7 @@ import Contacts from "../contacts";
 import Avatar from "./Avatar";
 import Emojipedia from "../Emojipedia";
 import Login from "./Login";
+import Destracting from "./Destructing";
 
 
 const emojis = Emojipedia.map(emoji => {
@@ -18,7 +19,9 @@ const emojis = Emojipedia.map(emoji => {
 function App() {
     return (
     <div>
+   
         <Login />
+        <Destracting />
         <h1>
             <span>emojipedia</span>
         </h1>
