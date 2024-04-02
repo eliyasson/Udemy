@@ -4,7 +4,9 @@ import { ReactDOM } from "react";
 
 function Login() {
     const [headingText, setHeadingText] = useState("Hello");
-    const [isMousedOver, setMouseOver] = useState(false)
+    const [isMousedOver, setMouseOver] = useState(false);
+
+    const [name, setName] = useState("")
 
     function handleClick() {
         setHeadingText();
@@ -15,11 +17,15 @@ function Login() {
     function handleMouseOut() {
         setMouseOver(false);
     }
+    function handleChange(event) {
+        
+        setName(event.target.value)
+    }
 
     return (
         <div className="container">
-             <h1>{headingText}</h1>
-            <input type="text" placeholder="What's your name?" />
+             <h1>{headingText} {name}</h1>
+            <input onChange={handleChange} type="text" placeholder="What's your name?" />
          
             <form className="form">
                 <input type="text" placeholder="Username" />
