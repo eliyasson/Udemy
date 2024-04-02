@@ -1,26 +1,34 @@
 import React, { useState } from "react";
 import { ReactDOM } from "react";
 
-const now = new Date().toLocaleTimeString();
-function Login() {
-    const [time, setTime] = useState(now);
 
-    function getTime() {
-        const now = new Date().toLocaleTimeString();
-        setTime(now);
+function Login() {
+    const [headingText, setHeadingText] = useState("Hello");
+    const [isMousedOver, setMouseOver] = useState(false)
+
+    function handleClick() {
+        setHeadingText();
     }
-    function sayHi() {
-        
+    function handleMouseOver() {
+        setMouseOver(true);
     }
-    setInterval(getTime, 10000);
+    function handleMouseOut() {
+        setMouseOver(false);
+    }
+
     return (
         <div className="container">
-           <h1>{time}</h1>
-           <h2>{sayHi}</h2>
+             <h1>{headingText}</h1>
+            <input type="text" placeholder="What's your name?" />
+         
             <form className="form">
                 <input type="text" placeholder="Username" />
                 <input type="password" placeholder="Password" />
-                <button type="submit">Login</button>
+                <button style={{backgroundColor: isMousedOver ? 'black' : 'white'}} 
+                    onClick={handleClick} 
+                    onMouseOver={handleMouseOver} 
+                    onMouseOut={handleMouseOut} type="submit">Login
+                </button>
             </form>
         </div>
     )
