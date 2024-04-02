@@ -1,41 +1,35 @@
 import React, { useState } from "react";
-import { ReactDOM } from "react";
 
 
 function Login() {
-    const [headingText, setHeadingText] = useState("Hello");
-    const [isMousedOver, setMouseOver] = useState(false);
+    const [list, setList] = useState("");
+    const [input, setInput] = useState("");
+    const [todos, setTodos] = useState([]);
 
-    const [name, setName] = useState("")
-
-    function handleClick() {
-        setHeadingText();
-    }
-    function handleMouseOver() {
-        setMouseOver(true);
-    }
-    function handleMouseOut() {
-        setMouseOver(false);
-    }
     function handleChange(event) {
-        
-        setName(event.target.value)
+        setList(event.target.value);
+    }
+
+    function handleClick(event) {
+        setTodos(prevTodos => [...prevTodos, list]);
+        event.preventDefault();
+        setInput("");
     }
 
     return (
         <div className="container">
-             <h1>{headingText} {name}</h1>
-            <input onChange={handleChange} type="text" placeholder="What's your name?" />
+            <h1>Todo List</h1>
          
-            <form className="form">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <button style={{backgroundColor: isMousedOver ? 'black' : 'white'}} 
-                    onClick={handleClick} 
-                    onMouseOver={handleMouseOver} 
-                    onMouseOut={handleMouseOut} type="submit">Login
-                </button>
+            <form onSubmit={handleClick} className="form">
+                <input onChange={handleChange} type="text" placeholder="Todo list" value={list}/>
+                <button type="submit">Save</button>
             </form>
+            <ol>
+                { todos.map((todo, index) => (
+                    <li key={index}>{todo}</li>
+                ))}
+            </ol>
+           
         </div>
     )
 }
