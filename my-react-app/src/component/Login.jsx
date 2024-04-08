@@ -2,33 +2,47 @@ import React, { useState } from "react";
 
 
 function Login() {
-    const [list, setList] = useState("");
-    const [input, setInput] = useState("");
-    const [todos, setTodos] = useState([]);
+    
+    const [fullName, setFullName] = useState({
+        fname: "",
+        lname: ""
+    });
+
 
     function handleChange(event) {
-        setList(event.target.value);
-    }
+        const newValue = event.target.value;
+        const inputName = event.target.name;
 
-    function handleClick(event) {
-        setTodos(prevTodos => [...prevTodos, list]);
-        event.preventDefault();
-        setInput("");
+        if (inputName === "fname") {
+            setFullName({ fname: newValue})
+        } else if ( inputName === "lname") {
+            setFullName( { lname: newValue});
+        }
     }
+ 
 
     return (
         <div className="container">
             <h1>Todo List</h1>
-         
-            <form onSubmit={handleClick} className="form">
-                <input onChange={handleChange} type="text" placeholder="Todo list" value={list}/>
-                <button type="submit">Save</button>
+            <h2>Hello, {fullName.fname} {fullName.lname}</h2>
+            <form  className="form">
+                <input 
+                    name="fname" 
+                    onChange={handleChange}  type="text" 
+                    placeholder="First Name" 
+                    value={fullName.fname}
+                />
+
+                <input 
+                    onChange={handleChange} 
+                    name="lname" type="text" 
+                    placeholder="Last Name" 
+                    value={fullName.lname}
+                />
+
+                <button type="submit">Submit</button>
             </form>
-            <ol>
-                { todos.map((todo, index) => (
-                    <li key={index}>{todo}</li>
-                ))}
-            </ol>
+            
            
         </div>
     )
