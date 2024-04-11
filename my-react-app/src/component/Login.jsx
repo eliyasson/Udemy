@@ -2,39 +2,18 @@ import React, { useState } from "react";
 
 
 function Login() {
-    
     const [fullName, setFullName] = useState({
         fname: "",
-        lname: "",
-        email:""
+        lname: ""
+
     });
 
     function handleChange(event) {
-        const {value, name} = event.target;
-        
- 
+      const newValue = event.target.value;
+      const inputName = event.target.name;
 
-        setFullName(prevValue => {
-           if (name === "fname") {
-            return {
-                fname: value,
-                lname: prevValue.lname,
-                email: prevValue.email
-            }
-           } else if(name === "lname") {
-            return {
-                fname: prevValue.fname,
-                lname: value,
-                email: prevValue.email
-            }
-           } else if(name === "email") {
-            return {
-                email: value,
-                lname: prevValue.lname,
-                fname: prevValue.email
-            }
-           }
-        })
+      console.log(newValue);
+      console.log(inputName);
     }
 
     return (
